@@ -13,7 +13,7 @@ import { NavController } from '@ionic/angular';
 })
 export class AmigosPage implements OnInit {
 
-  usuarios: Observable<any>;
+  usuarios: any;
   @ViewChild('lista') lista: IonList
   constructor(private dataService: DataService,public navCtrl: NavController) { }
 
@@ -33,8 +33,9 @@ export class AmigosPage implements OnInit {
 
   deletar( user){
     console.log('deletar',user);
+    this.usuarios.splice(this.usuarios.findIndex(item => item.nome === user.nome), 1)
+    localStorage.setItem('data', JSON.stringify(this.usuarios))
     this.lista.closeSlidingItems()
-    
   }
 
 }

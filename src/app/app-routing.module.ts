@@ -22,6 +22,14 @@ const routes: Routes = [
   {
     path: 'novo-amigo',
     loadChildren: () => import('./novo-amigo/novo-amigo.module').then( m => m.NovoAmigoPageModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'editar-amigo',
+    loadChildren: () => import('./editar-amigo/editar-amigo.module').then( m => m.EditarAmigoPageModule)
   }
 ];
 
