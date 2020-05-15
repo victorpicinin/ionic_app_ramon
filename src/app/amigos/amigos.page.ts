@@ -4,13 +4,11 @@ import { Observable } from 'rxjs';
 import { IonList } from '@ionic/angular';
 import { NavController } from '@ionic/angular';
 
-
-
 @Component({
   selector: 'app-amigos',
   templateUrl: './amigos.page.html',
   styleUrls: ['./amigos.page.scss'],
-})
+}) 
 export class AmigosPage implements OnInit {
 
   usuarios: any;
@@ -24,6 +22,7 @@ export class AmigosPage implements OnInit {
   editar( user){
     console.log('editar',user);
     this.lista.closeSlidingItems()
+    this.navCtrl.navigateRoot('/editar-amigo')
   }
 
   adicionar(){

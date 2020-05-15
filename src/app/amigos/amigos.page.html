@@ -13,13 +13,18 @@
     <!-- | async-->
     <ion-item-sliding *ngFor="let user of usuarios">
       <ion-item>
+        <div style="zoom: 3;">
+          <ion-icon name="person-circle-outline" large></ion-icon>
+        </div>
         <ion-label>
-          <h3>{{ user.name }}</h3>
+          
+          
+          <h2><b>{{ user.name }}</b></h2>
           
           <p>{{ user.idade }}</p>
         </ion-label>
   
-        <ion-label slot="end" text-right>
+        <ion-label style="text-align: left;">
           {{ user.amizade }}
         </ion-label>
       </ion-item>

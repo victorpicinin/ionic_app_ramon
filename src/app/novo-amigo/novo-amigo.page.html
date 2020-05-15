@@ -1,16 +1,15 @@
 <ion-header>
+  
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
+      <ion-back-button defaultHref="amigos"></ion-back-button>
     </ion-buttons>
     <ion-title>Novo Amigo </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<!-- Default Input -->
-<ion-input></ion-input>
-
 <!-- Input with value -->
 <ion-item color="light">
   <ion-label>Nome:</ion-label>
@@ -28,5 +27,4 @@
 </ion-item>
 
 <ion-button shape='block' (click)="adicionar(user)">Salvar</ion-button>
-
 </ion-content>

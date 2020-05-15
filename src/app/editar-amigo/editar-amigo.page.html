@@ -1,9 +1,28 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>editar_amigo</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-back-button defaultHref="amigos"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Editar Amigo</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+<ion-item color="light">
+  <ion-label>Nome:</ion-label>
+  <ion-input #nome value></ion-input>
+</ion-item>
 
+<ion-item color="light">
+  <ion-label>Idade:</ion-label>
+  <ion-input #idade type="number" value="idade"></ion-input>
+</ion-item>
+
+<ion-item color="light">
+  <ion-label>Nivel:</ion-label>
+  <ion-input #nivel type="number" value="nivel"></ion-input>
+</ion-item>
+
+<ion-button shape='block' (click)="adicionar(user)">Salvar</ion-button>
 </ion-content>
